@@ -88,11 +88,15 @@ function buttonStay() {  // when the player hit the button stay
     updateScores();
 
     if (dealer_score > 42 || player_score >= dealer_score) {
-        alert("Vous avez gagnez !");
-        reset()
+        setTimeout(function () {
+            alert("Vous avez gagné !");
+            reset()
+        }, 0);  // give the time to jQuerry to change html content
     } else {
-        alert("Vous avez perdu !");
-        reset()
+        setTimeout(function () {
+            alert("Vous avez perdu !");
+            reset()
+        }, 0);  // give the time to jQuerry to change html content
     }
 
 }
