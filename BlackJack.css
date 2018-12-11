@@ -100,4 +100,7 @@ img.card {
     top: 85vh;
 }
 
+#hiddenDeck {
+    display: none;
+}
 

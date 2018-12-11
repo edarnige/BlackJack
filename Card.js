@@ -10,7 +10,7 @@ class Card {
         } else { // else if it the Ace
             this.value = 11
         }
-
+        $("#hiddenDeck").append("<img class='card' src='" + this.face + "'/>")
     }
 
     add_to_deck(id_deck_div) {  // add the card graphically to the deck identified by the id

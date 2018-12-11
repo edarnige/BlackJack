@@ -94,6 +94,7 @@ function buttonStay() {  // when the player hit the button stay
         alert("Vous avez perdu !");
         reset()
     }
+
 }
 
 function reset() {  // reset the game
