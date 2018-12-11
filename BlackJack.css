@@ -1,17 +1,46 @@
+div {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.table {
+    background-image: url(img/table.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 90vw;
+    height: 45vw;
+}
+
+img.card {
+    height: 100px;
+    width: auto;
+}
+
+
+.space{
+    content:"\a\a\a";
+    white-space: pre;
+}
+
 .centered{
     display: table;
     margin-left: auto;
     margin-right: auto;
 }
 
-body {
-    background-image: url(img/table.png);
-    background-size: 900px;
-    background-repeat: no-repeat;
-    background-position: center;
+h3:after{
+    content:"\a\a\a";
+    white-space: pre;
 }
 
-img.card {
-    height: 150px;
-    width: auto;
+#player {
+    position: absolute;
+    top: 80vh;
+    left: 25vw;
+}
+
+#yourcards{
+    margin-bottom: 0;
 }
