@@ -67,7 +67,7 @@ h3:after {
 #MarathonJack {
 
     position: absolute;
-    padding-left: 40vw;
+    padding-left: 42vw;
     white-space: nowrap;
 
 }
@@ -103,6 +103,13 @@ h3:after {
 
 #interface{
     position: absolute;
-    left: 45vw;
+    left: 44vw;
     top: 85vh; 
 }
+
+
+.inter{
+    position: relative;
+    right:1vw;
+}
+
