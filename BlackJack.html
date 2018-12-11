@@ -4,6 +4,9 @@
         <link rel="stylesheet" href="BlackJack.css">
         <meta charset="utf-8" />
         <title> BlackJack  </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="Card.js"></script>
+        <script src="main.js"></script>
     </head>
 
 <body>
@@ -11,12 +14,13 @@
         <h1> Marathon Jack</h1>
     </div>
     <div class="table">
-        <h3 class="centered"> Dealer's cards</h3>
-        <div id="dealer">
-            <img id = "Dcard" src="img_svg/1.svg" alt="card" class="card"/>
+        <div id="deck">
+
         </div>
-        <div id="player">
-            <img id = "Pcard" src="img_svg/2.svg" alt="card" class="card"/>
+        <h3 class="centered"> Dealer's cards</h3>
+        <div id="dealer" class="deck">
+        </div>
+        <div id="player" class="deck">
         </div>
         <h3 id="youcards" class="centered"> Your cards</h3>
 
@@ -24,9 +28,9 @@
     <div>
         <p id = "DealerScore" class="space">The dealer has 8 points.</p>
         <p id= "PlayerScore"> You have 10 points. Card or stay?</p>
-        <button class="" id="buttonCard">Card</button> 
-        <button class="" id="buttonStay">Stay</button> 
-        <button class="" id="buttonStart">Start again</button> 
+        <button class="inter" id="buttonCard">Card</button>
+        <button class="inter" id="buttonStay">Stay</button>
+        <button class="inter" id="buttonStart">Start again</button>
     </div>
 
 </body>

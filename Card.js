@@ -1,6 +1,6 @@
 class Card {
     constructor(card_num) {
-        this.position = "unused";
+        this.position = "deck";
         this.recto = "img_svg/recto.svg";
         this.src = this.recto;
         let num = parseInt(card_num) % 13;
@@ -14,17 +14,18 @@ class Card {
 
     }
 
-    flip() {
-        if (this.src === this.recto) {
-            this.src = this.verso
-        } else {
-            this.src = this.recto
-        }
+    add_to_deck(id_deck_div) {
+        this.src = this.verso;
+        this.position = id_deck_div;
+        $('#deck').children().last().remove();
+        $("#" + id_deck_div).append("<img class='card' src='" + this.src + "' alt='" + this.value + "'/>")
     }
 
-    add_to_deck(id_deck_div) {
-        this.flip();
-        $("#" + id_deck_div).append("<img class='card' src='" + this.src + "' alt='" + this.value + "'/>")
+    remove () {
+        this.src = this.recto;
+        $('#' + this.position).children().last().remove();
+        $("#deck").append("<img class='card' src='" + this.src + "' alt='" + this.value + "'/>")
+
     }
 
 }

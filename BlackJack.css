@@ -25,6 +25,7 @@ img.card {
     width: auto;
     padding-top: 40px;
     padding-bottom: 120px;
+    border: 0.5vw solid transparent;
 }
 
 
@@ -46,5 +47,11 @@ h3:after{
 
 #dealerscards{
     position: relative;
-    
+
 }
+
+body {
+    background-color: #631414;
+    color: white;
+}
+
