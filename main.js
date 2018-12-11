@@ -21,6 +21,9 @@ function add_to_dealer() {
     dealer_deck.push(card);
     card.add_to_deck("dealer");
     dealer_score += card.value;
+    if (card.value === 11) {
+        ace_dealer++
+    }
 }
 
 function add_to_player() {
@@ -28,12 +31,24 @@ function add_to_player() {
     player_deck.push(card);
     card.add_to_deck("player");
     player_score += card.value;
+    if (card.value === 11) {
+        ace_player++
+    }
 
 }
 
 function updateScores() {
+
     $("#DealerScore").text("The dealer has " + dealer_score + " points.");
 
+    while (ace_player > 0) {
+        if (player_score > 42) {
+            player_score -= 10;
+            ace_player--
+        } else {
+            break
+        }
+    }
     $("#PlayerScore").text("The player has " + player_score + " points.")
 
 
@@ -42,20 +57,35 @@ function updateScores() {
 function turn(event) {
 
     if (this.id == "buttonCard") {
-        add_to_player()
+        add_to_player();
+        updateScores();
+
+        if (player_score > 42) {
+
+            alert("Vous avez perdu !");
+            reset()
+        }
 
     } else if (this.id == "buttonStay") {
         for (let i = 0; i < 6; i++) {
+            add_to_dealer();
+            while (ace_dealer > 0) {
+                if (dealer_score > 42) {
+                    dealer_score -= 10;
+                    ace_dealer--
+                } else {
+                    break
+                }
+            }
             if (dealer_score < player_score && dealer_score < 42) {
-                add_to_dealer()
-
 
             } else {
                 break
             }
         }
         updateScores();
-        if (dealer_score > 42 && dealer_score > player_score) {
+
+        if (dealer_score > 42 || player_score >= dealer_score) {
             alert("Vous avez gagnez !");
             reset()
         } else {
@@ -67,12 +97,7 @@ function turn(event) {
     } else if (this.id == "buttonStart") {
         reset()
     }
-    updateScores();
 
-    if (player_score > 42) {
-        alert("Vous avez perdu !");
-        reset()
-    }
 
 }
 
@@ -93,6 +118,8 @@ function reset() {
     $("#player").html("");
     dealer_score = 0;
     player_score = 0;
+    ace_dealer = 0;
+    ace_player = 0;
     initiate(false);
     updateScores()
 }
@@ -104,10 +131,10 @@ function initiate(first = true) {
             let card = new Card(i);
             card_deck.push(card);
             $("#deck").append("<img class='deck-card' src='img_svg/cover.svg' alt='" + card.value +
-                "' style='top:" + (84-2*i) + "px;z-index:" + i + "'/>")
+                "' style='top:" + (84 - 2 * i) + "px;z-index:" + i + "'/>")
         }
 
-        $(".inter").click(turn)
+        $(".button_interface").click(turn)
     }
 
     shuffle(card_deck);
@@ -120,4 +147,5 @@ function initiate(first = true) {
 
 let card_deck = [], dealer_deck = [], player_deck = [];
 let dealer_score = 0, player_score = 0;
+let ace_player = 0, ace_dealer = 0;
 window.onload = initiate;
