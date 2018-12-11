@@ -1,0 +1,12 @@
+.centered{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-image: url(img/table.png);
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
