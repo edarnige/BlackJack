@@ -3,6 +3,7 @@ body {
     color: white
 }
 
+
 div {
     display: table;
     margin-left: auto;
@@ -11,28 +12,24 @@ div {
 }
 
 div.table {
-    background-image: url(img/table.png);
-    background-size: 80vw 80vh;
-    background-repeat: no-repeat;
-    background-position: center;
     top: 5vw;
     width: 90vw;
     height: 45vw;
-    border: solid;
-    border-color: black;
 }
 
 img.card {
-    height: 100px;
-    width: auto;
+    height: auto;
+    width: 5vw;
     padding-top: 40px;
     padding-bottom: 120px;
     border: 0.5vw solid transparent;
+    position: absolute
+
 }
 
 .deck-card {
-    height: 100px;
-    width: auto;
+    height: auto;
+    width: 5vw;
     position: absolute;
 }
 
@@ -53,19 +50,60 @@ h3:after {
 }
 
 #dealerscards {
-    position: relative;
+
+    position: absolute;
+    top: 6vh;
+    left: 45vw;
 
 }
 
-body {
-    background-color: #631414;
-    color: white;
-}
+
 
 #deck {
     position: absolute;
-
     left: 20vw;
-
     top: 28vh;
+}
+
+#MarathonJack {
+
+    position: absolute;
+    padding-left: 40vw;
+    white-space: nowrap;
+
+}
+
+#table{
+    position: absolute;
+    width:90vw;
+    height:75vh;
+    padding-top:10vh;
+    padding-left:5vw;
+    padding-bottom: 10vh;
+    
+}
+
+#yourcards {
+    position: absolute;
+    left: 45vw;
+    top: 60vh;
+}
+
+#dealer{
+    position: absolute;
+    left: 45vw;
+    top: 10vh;
+}
+
+#player{
+    position: absolute;
+    left: 45vw;
+    top: 30vh;
+
+}
+
+#interface{
+    position: absolute;
+    left: 45vw;
+    top: 85vh; 
 }
