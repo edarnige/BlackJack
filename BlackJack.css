@@ -61,7 +61,7 @@ h3:after {
 #deck {
     position: absolute;
     left: 20vw;
-    top: 28vh;
+    top: 23vh;
 }
 
 #MarathonJack {
@@ -85,19 +85,19 @@ h3:after {
 #yourcards {
     position: absolute;
     left: 45vw;
-    top: 60vh;
+    top: 65vh;
 }
 
 #dealer{
     position: absolute;
-    left: 45vw;
+    left: 30vw;
     top: 10vh;
 }
 
 #player{
     position: absolute;
-    left: 45vw;
-    top: 30vh;
+    left: 30vw;
+    top: 40vh;
 
 }
 
