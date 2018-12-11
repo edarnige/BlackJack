@@ -1,9 +1,14 @@
+/*
+Set the background to red and the text to white
+*/
 body {
     background-color: #480808;
     color: white
 }
 
-
+/*
+Default centering in all divisions
+*/
 div {
     display: table;
     margin-left: auto;
@@ -11,6 +16,12 @@ div {
     position: absolute;
 }
 
+/*
+EVERY element is aligned by viewport percentage
+to remain at least somewhat proportional when
+changing the window size (although, it is not
+perfect)
+*/
 div.table {
     top: 5vw;
     width: 90vw;
@@ -32,11 +43,6 @@ img.card {
     position: absolute;
 }
 
-.space {
-    content: "\a\a\a";
-    white-space: pre;
-}
-
 .centered {
     display: table;
     margin-left: auto;
@@ -49,13 +55,10 @@ h3:after {
 }
 
 #dealerscards {
-
     position: absolute;
     top: 6vh;
     left: 45vw;
-
 }
-
 
 #deck {
     position: absolute;
@@ -64,11 +67,9 @@ h3:after {
 }
 
 #MarathonJack {
-
     position: absolute;
     padding-left: 42vw;
     white-space: nowrap;
-
 }
 
 #table {
@@ -78,7 +79,6 @@ h3:after {
     padding-top: 10vh;
     padding-left: 5vw;
     padding-bottom: 10vh;
-
 }
 
 #yourcards {
@@ -97,7 +97,6 @@ h3:after {
     position: absolute;
     left: 30vw;
     top: 40vh;
-
 }
 
 #interface {
@@ -105,7 +104,6 @@ h3:after {
     left: 44vw;
     top: 85vh;
 }
-
 
 .button_interface {
     position: relative;
