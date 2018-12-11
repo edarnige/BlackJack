@@ -22,10 +22,4 @@ class Card {
         $("#" + id_deck_div).append("<img class='card' src='" + this.src + "'/>")
     }
 
-    remove() {
-        this.src = this.cover;
-        $('#' + this.position).children().last().remove();
-
-    }
-
 }

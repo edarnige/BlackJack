@@ -57,7 +57,6 @@ h3:after {
 }
 
 
-
 #deck {
     position: absolute;
     left: 20vw;
@@ -72,14 +71,14 @@ h3:after {
 
 }
 
-#table{
+#table {
     position: absolute;
-    width:90vw;
-    height:75vh;
-    padding-top:10vh;
-    padding-left:5vw;
+    width: 90vw;
+    height: 75vh;
+    padding-top: 10vh;
+    padding-left: 5vw;
     padding-bottom: 10vh;
-    
+
 }
 
 #yourcards {
@@ -88,28 +87,28 @@ h3:after {
     top: 65vh;
 }
 
-#dealer{
+#dealer {
     position: absolute;
     left: 30vw;
     top: 10vh;
 }
 
-#player{
+#player {
     position: absolute;
     left: 30vw;
     top: 40vh;
 
 }
 
-#interface{
+#interface {
     position: absolute;
     left: 44vw;
-    top: 85vh; 
+    top: 85vh;
 }
 
 
-.button_interface{
+.button_interface {
     position: relative;
-    right:1vw;
+    right: 1vw;
 }
 
