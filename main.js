@@ -48,15 +48,19 @@ function turn(event) {
         for (let i = 0; i < 6; i++) {
             if (dealer_score < player_score && dealer_score < 42) {
                 add_to_dealer()
+
+
             } else {
                 break
             }
         }
+        updateScores();
         if (dealer_score > 42 && dealer_score > player_score) {
             alert("Vous avez gagnez !");
             reset()
         } else {
-            alert("Vous avez perdu !")
+            alert("Vous avez perdu !");
+            reset()
         }
 
 
@@ -76,13 +80,17 @@ function reset() {
     for (let i = 0; i < dealer_deck.length; i++) {
         let card = dealer_deck.pop();
         card_deck.push(card);
-        card.remove();
+        $("#deck").append("<img class='deck-card' src='img_svg/cover.svg' alt='" + card.value +
+            "' style='top:" + (84 - 2 * card_deck.length) + "px;z-index:" + card_deck.length + "'/>")
     }
     for (let i = 0; i < player_deck.length; i++) {
         let card = player_deck.pop();
         card_deck.push(card);
-        card.remove();
+        $("#deck").append("<img class='deck-card' src='img_svg/cover.svg' alt='" + card.value +
+            "' style='top:" + (84 - 2 * card_deck.length) + "px;z-index:" + card_deck.length + "'/>")
     }
+    $("#dealer").html("");
+    $("#player").html("");
     dealer_score = 0;
     player_score = 0;
     initiate(false);
@@ -98,18 +106,16 @@ function initiate(first = true) {
             $("#deck").append("<img class='deck-card' src='img_svg/cover.svg' alt='" + card.value +
                 "' style='top:" + (84-2*i) + "px;z-index:" + i + "'/>")
         }
+
+        $(".inter").click(turn)
     }
 
     shuffle(card_deck);
-    // for (let card of card_deck) {
-    //     $("#deck").append(card)
-    // }
 
     add_to_dealer();
     add_to_player();
-    updateScores();
 
-    $(".inter").click(turn)
+    updateScores();
 }
 
 let card_deck = [], dealer_deck = [], player_deck = [];
