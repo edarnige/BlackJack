@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #480808;
     color: white
 }
@@ -7,13 +7,15 @@ div {
     display: table;
     margin-left: auto;
     margin-right: auto;
+    position: absolute;
 }
 
 div.table {
     background-image: url(img/table.png);
-    background-size: cover;
+    background-size: 80vw 80vh;
     background-repeat: no-repeat;
     background-position: center;
+    top: 5vw;
     width: 90vw;
     height: 45vw;
     border: solid;
@@ -28,24 +30,29 @@ img.card {
     border: 0.5vw solid transparent;
 }
 
+.deck-card {
+    height: 100px;
+    width: auto;
+    position: absolute;
+}
 
-.space{
-    content:"\a\a\a";
+.space {
+    content: "\a\a\a";
     white-space: pre;
 }
 
-.centered{
+.centered {
     display: table;
     margin-left: auto;
     margin-right: auto;
 }
 
-h3:after{
-    content:"\a\a\a";
+h3:after {
+    content: "\a\a\a";
     white-space: pre;
 }
 
-#dealerscards{
+#dealerscards {
     position: relative;
 
 }
@@ -55,3 +62,10 @@ body {
     color: white;
 }
 
+#deck {
+    position: absolute;
+
+    left: 20vw;
+
+    top: 28vh;
+}

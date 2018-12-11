@@ -52,6 +52,13 @@ function turn(event) {
                 break
             }
         }
+        if (dealer_score > 42 && dealer_score > player_score) {
+            alert("Vous avez gagnez !");
+            reset()
+        } else {
+            alert("Vous avez perdu !")
+        }
+
 
     } else if (this.id == "buttonStart") {
         reset()
@@ -65,7 +72,7 @@ function turn(event) {
 
 }
 
-function reset () {
+function reset() {
     for (let i = 0; i < dealer_deck.length; i++) {
         let card = dealer_deck.pop();
         card_deck.push(card);
@@ -86,7 +93,10 @@ function reset () {
 function initiate(first = true) {
     if (first) {
         for (let i = 1; i < 43; i++) {
-            card_deck.push(new Card(i))
+            let card = new Card(i);
+            card_deck.push(card);
+            $("#deck").append("<img class='deck-card' src='img_svg/cover.svg' alt='" + card.value +
+                "' style='top:" + (84-2*i) + "px;z-index:" + i + "'/>")
         }
     }
 
