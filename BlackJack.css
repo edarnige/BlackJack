@@ -49,7 +49,7 @@ img.card {
     margin-right: auto;
 }
 
-#dealerscards {
+#DealerTag {
     position: absolute;
     top: 6vh;
     left: 45vw;
@@ -76,7 +76,7 @@ img.card {
     padding-bottom: 10vh;
 }
 
-#yourcards {
+#PlayerTag {
     position: absolute;
     left: 45vw;
     top: 65vh;
@@ -100,8 +100,4 @@ img.card {
     top: 85vh;
 }
 
-.button_interface {
-    position: relative;
-    right: 1vw;
-}
 

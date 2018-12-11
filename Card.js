@@ -1,10 +1,8 @@
 class Card {
-    constructor(card_num) {
-        this.position = "deck";
-        this.cover = "img_svg/cover.svg";
-        this.src = this.cover;
-        let num = card_num % 13;
-        this.face = "img_svg/" + card_num + ".svg";
+    constructor(card_id_num) {
+        let num = card_id_num % 13;  // extract value from the id number
+        this.face = "img_svg/" + card_id_num + ".svg";
+
         if (num > 10 || num === 0) {  // If it's a face
             this.value = 10;
         } else if (num !== 1) {  // else if it's not the Ace
@@ -15,11 +13,9 @@ class Card {
 
     }
 
-    add_to_deck(id_deck_div) {
-        this.src = this.face;
-        this.position = id_deck_div;
-        $('#deck').children().last().remove();
-        $("#" + id_deck_div).append("<img class='card' src='" + this.src + "'/>")
+    add_to_deck(id_deck_div) {  // add the card graphically to the deck identified by the id
+        $('#deck').children().last().remove();  // remove the last card from the deck
+        $("#" + id_deck_div).append("<img class='card' src='" + this.face + "'/>")  // add the representation of the card in the correct deck
     }
 
 }
